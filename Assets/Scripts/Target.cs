@@ -6,6 +6,8 @@ public class Target : MonoBehaviour
 {
     private float lifeTime = 2f;
     private GameManager gamaManagerScript;
+    public int points;
+    public ParticleSystem explosionParticle;
     void Start()
     {
         //Autodestruccion tras 2 segundos
@@ -21,11 +23,18 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Destroy(gameObject);
-
-        if (gameObject.CompareTag("Bad"))
+        if (!gamaManagerScript.isGameOver)
         {
-            gamaManagerScript.isGameOver = true;
+            gamaManagerScript.UpdateScore(points);
+
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+
+            Destroy(gameObject);
+
+            if (gameObject.CompareTag("Bad"))
+            {
+                gamaManagerScript.GameOver();
+            }
         }
     }
 
