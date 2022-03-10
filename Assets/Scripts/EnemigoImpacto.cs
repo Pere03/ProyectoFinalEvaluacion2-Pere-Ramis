@@ -2,20 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class EnemigoImpacto : MonoBehaviour
 {
     private PlayerController playerControllerScript;
-    public float speed = 10f;
-
     void Start()
     {
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
+
+    // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    private void OnCollisionEnter(Collision otherCollider)
     {
         if (!playerControllerScript.GameOver)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            if (otherCollider.collider.tag == "Player")
+            {
+                playerControllerScript.GameOver = true;
+                Destroy(gameObject);
+            }
         }
     }
 }

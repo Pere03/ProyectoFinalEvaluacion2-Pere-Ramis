@@ -6,24 +6,28 @@ public class GiroTorreta : MonoBehaviour
 {
     public float turnSpeedH = 50f;
     public float horizontalInput;
+    private PlayerController playerControllerScript;
     void Start()
     {
-
+        playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!playerControllerScript.GameOver)
         {
-            transform.Rotate(Vector3.forward * turnSpeedH * Time.deltaTime);
-        }
+            horizontalInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            transform.Rotate(Vector3.back * turnSpeedH * Time.deltaTime);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                transform.Rotate(Vector3.forward * turnSpeedH * Time.deltaTime);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                transform.Rotate(Vector3.back * turnSpeedH * Time.deltaTime);
+            }
         }
     }
 }

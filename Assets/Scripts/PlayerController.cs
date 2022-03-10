@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public float movementTimeLeft;
     public float rotateSpeed;
     public bool GameOver;
-
     void Start()
     {
         PlayerRigidBody = GetComponent<Rigidbody>();
@@ -59,5 +58,17 @@ public class PlayerController : MonoBehaviour
                 PlayerRigidBody.velocity = new Vector3(0, PlayerRigidBody.velocity.y, 0);
             }
         }    
+    }
+
+    private void OnCollisionEnter(Collision otherCollider)
+    {
+        if (!GameOver)
+        {
+            if (otherCollider.collider.tag == "ProyectilEnemigo")
+            {
+                GameOver = true;
+                Destroy(gameObject);
+            }
+        }
     }
 }

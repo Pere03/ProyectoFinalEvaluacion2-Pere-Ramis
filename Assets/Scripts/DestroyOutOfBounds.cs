@@ -47,9 +47,12 @@ public class DestroyOutOfBounds : MonoBehaviour
 
     private void OnCollisionEnter(Collision otherCollider)
     {
-        if (otherCollider.collider.tag == "Wall")
-        {
-            Destroy(gameObject);
+        if (!playerControllerScript.GameOver)
+        { 
+            if (otherCollider.collider.tag == "Wall")
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

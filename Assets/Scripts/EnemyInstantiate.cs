@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class EnemyInstantiate : MonoBehaviour
 {
+    public GameObject proyectil;
     private PlayerController playerControllerScript;
-    public float speed = 10f;
-
     void Start()
     {
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+        InvokeRepeating("SpawnProyectil", 2f, 4f);
     }
+
+    // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void SpawnProyectil()
     {
         if (!playerControllerScript.GameOver)
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            Instantiate(proyectil, transform.position, transform.rotation);
         }
     }
 }
