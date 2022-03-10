@@ -18,7 +18,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     void Update()
     {
 
-
+        /*
 
         //Limite de la posicion X en el que se destruira
         if (transform.position.x > xPosLim)
@@ -41,17 +41,28 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        */
 
     }
 
-    private void OnColliderionEnter(Collision otherCollider)
+    private void OnCollisionEnter(Collision otherCollider)
+    {
+        if (otherCollider.collider.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    /*
+    private void OnColliderEnter(Collider otherCollider)
     {
         if (!playerControllerScript.GameOver)
         {
-            if (otherCollider.gameObject.CompareTag("Pared"))
+            if (otherCollider.collider.tag == "Wall")
             {
                 Destroy(gameObject);
             }
         }
     }
+    */
 }
