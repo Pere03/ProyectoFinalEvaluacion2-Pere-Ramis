@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Enemy
   - ProyectilEnemigo
+  - ProyectilPlayer
   layers:
   - Default
   - TransparentFX

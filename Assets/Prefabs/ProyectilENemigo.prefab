@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 4319588678681584503}
   - component: {fileID: 1172069242368993820}
   - component: {fileID: 3476137308547024837}
-  - component: {fileID: 8243199587642905307}
   m_Layer: 0
   m_Name: ProyectilENemigo
   m_TagString: ProyectilEnemigo
@@ -59,7 +58,7 @@ BoxCollider:
   m_GameObject: {fileID: 7507395390212190885}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.495135}
   m_Center: {x: 0, y: 0, z: 0.11667958}
@@ -104,18 +103,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &8243199587642905307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7507395390212190885}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc9c7c18e7b5664cacea5e2614f0f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &9098511712054245806
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,15 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody PlayerRigidBody;
     public float Speed;
-    public GameObject missilePrefab;
-    public float stopMovementTimer;
-    public float movementTimeLeft;
+    private float stopMovementTimer;
+    private float movementTimeLeft;
     public float rotateSpeed;
     public bool GameOver;
+    public ParticleSystem ExplosionParticleSystem;
+
     void Start()
     {
         PlayerRigidBody = GetComponent<Rigidbody>();
         movementTimeLeft = stopMovementTimer;
+
     }
 
     void Update()
@@ -66,8 +68,9 @@ public class PlayerController : MonoBehaviour
         {
             if (otherCollider.collider.tag == "ProyectilEnemigo")
             {
+                ExplosionParticleSystem.Play();
                 GameOver = true;
-                Destroy(gameObject);
+                Destroy(otherCollider.gameObject);
             }
         }
     }

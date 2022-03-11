@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: -6404214134968446012}
   m_Layer: 0
   m_Name: ProyectilL
-  m_TagString: Untagged
+  m_TagString: ProyectilPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,8 +41,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9070166245911273955}
-  m_LocalRotation: {x: -0.000000059173658, y: -0.8508145, z: -0.00000007550277, w: 0.5254662}
-  m_LocalPosition: {x: 0.8455405, y: 2.0077894, z: -85.449875}
+  m_LocalRotation: {x: 0.000051204468, y: 0.46955267, z: -0.00006530297, w: -0.8829045}
+  m_LocalPosition: {x: -39.507065, y: 2.007939, z: 1.2863514}
   m_LocalScale: {x: 0.35041288, y: 0.35041288, z: 0.16845134}
   m_Children:
   - {fileID: 3372853681000530418}
@@ -57,7 +57,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9070166245911273955}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 6.495135}

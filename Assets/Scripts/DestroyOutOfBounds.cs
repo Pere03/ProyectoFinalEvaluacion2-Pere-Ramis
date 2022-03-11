@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
+    /*
     private float xPosLim = 118;
     private float xNegLim = -129;
     private float zPosLim = 94;
     private float zNegLim = -123;
+    */
     private PlayerController playerControllerScript;
 
     void Start()
