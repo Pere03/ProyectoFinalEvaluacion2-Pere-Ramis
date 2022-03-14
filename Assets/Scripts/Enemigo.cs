@@ -4,29 +4,38 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    private Rigidbody EnemigoRigidBody;
-    
+
+    public ParticleSystem HumoParticleSystem;
+    public ParticleSystem ExplosionParticleSystem;
+
 
     void Start()
     {
-        EnemigoRigidBody = GetComponent<Rigidbody>();
-       
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+
 
     private void OnCollisionEnter(Collision otherCollider)
     {
-        
-            if (otherCollider.collider.tag == "ProyectilPlayer")
-            {
-                Destroy(gameObject);
-                Destroy(otherCollider.gameObject);
-            }
-        
+
+        if (otherCollider.gameObject.CompareTag("ProyectilPlayer"))
+        {
+            Destroy(otherCollider.gameObject);
+            Destroy(gameObject);
+            Vector3 offset = new Vector3(0, 0, 0);
+            var inst = Instantiate(HumoParticleSystem, transform.position + offset, HumoParticleSystem.transform.rotation);
+            inst.Play();
+
+            Vector3 offsete = new Vector3(0, 0, 0);
+            var insta = Instantiate(ExplosionParticleSystem, transform.position + offsete, ExplosionParticleSystem.transform.rotation);
+            insta.Play();
+        }
     }
 }

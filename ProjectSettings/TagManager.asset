@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - ProyectilEnemigo
   - ProyectilPlayer
+  - EnemyInv
   layers:
   - Default
   - TransparentFX

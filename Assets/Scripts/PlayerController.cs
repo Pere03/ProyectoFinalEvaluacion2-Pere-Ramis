@@ -68,10 +68,16 @@ public class PlayerController : MonoBehaviour
         {
             if (otherCollider.collider.tag == "ProyectilEnemigo")
             {
-                ExplosionParticleSystem.Play();
+               
                 GameOver = true;
+                Destroy(gameObject);
                 Destroy(otherCollider.gameObject);
+                Vector3 offset = new Vector3(0, 0, 0);
+                var inst = Instantiate(ExplosionParticleSystem, transform.position + offset, ExplosionParticleSystem.transform.rotation);
+                inst.Play();
             }
         }
     }
+
+ 
 }

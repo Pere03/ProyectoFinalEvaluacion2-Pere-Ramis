@@ -11,6 +11,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     private float zNegLim = -123;
     */
     private PlayerController playerControllerScript;
+    public ParticleSystem ExplosionParticleSystem;
 
     void Start()
     {
@@ -54,6 +55,9 @@ public class DestroyOutOfBounds : MonoBehaviour
             if (otherCollider.collider.tag == "Wall")
             {
                 Destroy(gameObject);
+                Vector3 offset = new Vector3(0, 0, 0);
+                var inst = Instantiate(ExplosionParticleSystem, transform.position + offset, ExplosionParticleSystem.transform.rotation);
+                inst.Play();
             }
         }
     }

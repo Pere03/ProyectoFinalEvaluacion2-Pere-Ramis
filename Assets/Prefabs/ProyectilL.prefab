@@ -41,8 +41,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9070166245911273955}
-  m_LocalRotation: {x: -0.000004984538, y: 0.11579743, z: 0.000082825005, w: 0.99327284}
-  m_LocalPosition: {x: 16.369364, y: 2.0079389, z: 31.452272}
+  m_LocalRotation: {x: -0.00000002523634, y: -0.556079, z: -0.000000095650606, w: 0.8311295}
+  m_LocalPosition: {x: -22.681694, y: 2.007789, z: -21.158129}
   m_LocalScale: {x: 0.35041288, y: 0.35041288, z: 0.16845134}
   m_Children:
   - {fileID: 3372853681000530418}
@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8fd1318877184a85d8c36992521f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionParticleSystem: {fileID: 2409546108132286418, guid: 230276e18be39a143984aaab1ecc7d32, type: 3}
 --- !u!54 &-6404214134968446012
 Rigidbody:
   m_ObjectHideFlags: 0
