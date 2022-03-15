@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 5260465015886627233}
   - component: {fileID: 5289870557565310533}
   - component: {fileID: 5279163668585744951}
-  - component: {fileID: 1618764881642122}
   m_Layer: 0
   m_Name: Torreta
   m_TagString: Untagged
@@ -207,20 +206,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1618764881642122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265877742136713449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d015950a7e05d4181ea762b7c0a5cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeedH: 1000
-  horizontalInput: 0
 --- !u!1 &5265905118844926675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,8 +1960,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5383286, y: 2.5271647, z: 7.6027374}
-  m_Center: {x: -0.005728483, y: 0.6460856, z: 1.0812607}
+  m_Size: {x: 2.5383286, y: 2.5003405, z: 7.526268}
+  m_Center: {x: -0.005728483, y: 0.6594978, z: 1.0685921}
 --- !u!114 &5265244157782302914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3473,13 +3458,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8e883a78773980499ab2c8b40fb6420, type: 3}
---- !u!4 &449734911310944781 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6153411748477290446, guid: d8e883a78773980499ab2c8b40fb6420, type: 3}
-  m_PrefabInstance: {fileID: 6005700628002872771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &449734911296790349 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 6153411748492493454, guid: d8e883a78773980499ab2c8b40fb6420, type: 3}
+  m_PrefabInstance: {fileID: 6005700628002872771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &449734911310944781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6153411748477290446, guid: d8e883a78773980499ab2c8b40fb6420, type: 3}
   m_PrefabInstance: {fileID: 6005700628002872771}
   m_PrefabAsset: {fileID: 0}
