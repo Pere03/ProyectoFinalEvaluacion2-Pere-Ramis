@@ -3081,7 +3081,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4796498789715708205}
   - component: {fileID: 4631157372523815119}
-  - component: {fileID: 6415893158420368798}
   - component: {fileID: 2986802617570866174}
   - component: {fileID: 5544062020063873908}
   m_Layer: 0
@@ -3168,22 +3167,6 @@ LODGroup:
     - renderer: {fileID: 4813425024402046223}
     - renderer: {fileID: 4813640899459874231}
   m_Enabled: 1
---- !u!114 &6415893158420368798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4799667437965608985}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8fed9388ba92f64b95820ffbefddc52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemigos: 0
-  Seconds: 2
-  HumoParticleSystem: {fileID: 0}
-  ExplosionParticleSystem: {fileID: 0}
 --- !u!114 &2986802617570866174
 MonoBehaviour:
   m_ObjectHideFlags: 0

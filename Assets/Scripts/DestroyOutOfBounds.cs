@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    /*
-    private float xPosLim = 118;
-    private float xNegLim = -129;
-    private float zPosLim = 94;
-    private float zNegLim = -123;
-    */
     private PlayerController playerControllerScript;
     public ParticleSystem ExplosionParticleSystem;
 
@@ -20,31 +14,6 @@ public class DestroyOutOfBounds : MonoBehaviour
 
     void Update()
     {
-
-        /*
-
-        //Limite de la posicion X en el que se destruira
-        if (transform.position.x > xPosLim)
-        {
-            Destroy(gameObject);
-        }
-
-        if (transform.position.x < xNegLim)
-        {
-            Destroy(gameObject);
-        }
-
-        //Limite de la posicion Z en el que se destruira
-        if (transform.position.z > zPosLim)
-        {
-            Destroy(gameObject);
-        }
-
-        if (transform.position.z < zNegLim)
-        {
-            Destroy(gameObject);
-        }
-        */
 
     }
 
@@ -61,17 +30,4 @@ public class DestroyOutOfBounds : MonoBehaviour
             }
         }
     }
-
-    /*
-    private void OnColliderEnter(Collider otherCollider)
-    {
-        if (!playerControllerScript.GameOver)
-        {
-            if (otherCollider.collider.tag == "Wall")
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-    */
 }
