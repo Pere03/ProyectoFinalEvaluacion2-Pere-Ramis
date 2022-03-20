@@ -9,12 +9,14 @@ public class MoveForward : MonoBehaviour
 
     void Start()
     {
+        //Con esto podemos acceder al script PlayerController de nuestro player
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
     void Update()
     {
         if (!playerControllerScript.GameOver)
         {
+            //Esto hace que cualquiera que tenga este script avanzara hacia delante segun la velocidad que tenga asignada
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
     }

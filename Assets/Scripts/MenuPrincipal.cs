@@ -6,17 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
+    public GameObject ControlesMenu;
+    public GameObject OpcionesMenu;
+    public GameObject MenuP;
 
     void Start()
     {
-        
+        ControlesMenu.SetActive(false);
+        OpcionesMenu.SetActive(false);
+        MenuP.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void EmpezarJuego()
     {
@@ -32,4 +32,23 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Controles()
+    {
+        MenuP.SetActive(false);
+        ControlesMenu.SetActive(true);
+    }
+    public void Opciones()
+    {
+        MenuP.SetActive(false);
+        OpcionesMenu.SetActive(true);
+    }
+
+    public void Volver()
+    {
+        MenuP.SetActive(true);
+        ControlesMenu.SetActive(false);
+    }
+
+    
 }

@@ -9,18 +9,15 @@ public class DestroyOutOfBounds : MonoBehaviour
 
     void Start()
     {
+        //Con esto podemos acceder al script PlayerController de nuestro player
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-    }
-
-    void Update()
-    {
-
     }
 
     private void OnCollisionEnter(Collision otherCollider)
     {
         if (!playerControllerScript.GameOver)
         { 
+            //Si el proyectil colisiona contra un muro, se destruira el proyectil y se reproduciran unas particulas de explosion
             if (otherCollider.collider.tag == "Wall")
             {
                 Destroy(gameObject);
