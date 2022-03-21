@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             controlCharacter();
         }
 
-        NoneEnemys = FindObjectsOfType<Enemigo>().Length;
+        NoneEnemys = FindObjectsOfType<Enemy>().Length;
 
         //Si el numero de enemigos baja a 0, se reproducira el sonido de win, se activara el menu de Win y se parara tanto la musica de fondo como el tiempo
         if (NoneEnemys == 0)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DispararProyectiles : MonoBehaviour
+public class Proyectiles : MonoBehaviour
 {
     private AudioSource ProyectilAudioSource;
     private PlayerController playerControllerScript;
